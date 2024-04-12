@@ -8,7 +8,7 @@ import 'home/Recommended.dart';
 import 'home/Shenzhen.dart';
 import 'home/Society.dart';
 import 'home/Toutiaohao.dart';
-import 'home/Video.dart';
+import 'home/NotificationPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -26,8 +26,8 @@ class _HomePageState extends State<HomePage>
     super.initState();
     _tabController = TabController(length: getTabs().length, vsync: this);
     _tabController.addListener(() {
-      if(_tabController.animation!.value == _tabController.index){
-        print("${_tabController.index}");//获取两次
+      if (_tabController.animation!.value == _tabController.index) {
+        print("${_tabController.index}"); //获取两次
       }
     });
   }
@@ -46,17 +46,17 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
-        child:  Container(
+        child: Container(
           height: 30,
           child: TabBar(
-              indicatorColor: Colors.red,
-              labelColor: Colors.red,
-              unselectedLabelColor: Colors.black26,
-              indicatorSize: TabBarIndicatorSize.label,
-              indicatorWeight: 2.0,
-              isScrollable: true,
-              controller: _tabController,
-              tabs: getTabs(),
+            indicatorColor: Colors.red,
+            labelColor: Colors.red,
+            unselectedLabelColor: Colors.black26,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 2.0,
+            isScrollable: true,
+            controller: _tabController,
+            tabs: getTabs(),
           ),
         ),
       ),
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage>
           RecommendedPage(),
           ButtonPage(),
           DialogPage(),
-          VideoPage(),
+          NotificationPage(),
           BeijingPage(),
           SocietyPage(),
           ToutiaohaoPage(),

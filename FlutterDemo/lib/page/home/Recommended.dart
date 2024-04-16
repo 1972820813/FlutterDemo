@@ -18,9 +18,9 @@ class _RecommendedPage extends State<RecommendedPage> {
       child: ListView(
         children: [
           SizedBox(
-            height: 50,
+            height: 40,
             child: Container(
-              padding: const EdgeInsets.all(10), //设置padding
+              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0), //设置padding
               alignment: Alignment.centerLeft, //设置垂直居中
               child: const Text(
                 "功能列表",
@@ -30,9 +30,9 @@ class _RecommendedPage extends State<RecommendedPage> {
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 40,
             child: Container(
-              padding: const EdgeInsets.all(10), //设置padding
+              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0), //设置padding
               alignment: Alignment.centerLeft, //设置垂直居中
               child: TextButton(
                   onPressed: () {
@@ -43,6 +43,23 @@ class _RecommendedPage extends State<RecommendedPage> {
                     );
                   },
                   child: const Text("Banner页面")),
+            ),
+          ),
+          SizedBox(
+            height: 40,
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0), //设置padding
+              alignment: Alignment.centerLeft, //设置垂直居中
+              child: TextButton(
+                  onPressed: () {
+                    //命名路由跳转
+                    Navigator.pushNamed(
+                      context,
+                      gotoWebView,
+                      arguments: {"url":"https://www.baidu.com/"}
+                    );
+                  },
+                  child: const Text("WebView页面")),
             ),
           ),
         ],

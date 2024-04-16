@@ -35,6 +35,8 @@ dependencies:
   dio: ^5.1.1 #网络请求库
   flutter_local_notifications: ^5.0.0+1 #通知库
   card_swiper: ^3.0.1 #banner轮播图库
+  flutter_inappwebview: ^5.3.2 #webview加载库
+
 
 dev_dependencies:
   flutter_test:
@@ -58,11 +60,11 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-    # To add assets to your application, add an assets section, like this:
+  # To add assets to your application, add an assets section, like this:
   assets:
-      - assets/images/icon_image_1.png
-      - assets/images/icon_image_2.png
-      - assets/images/icon_image_3.png
+    - assets/images/icon_image_1.png
+    - assets/images/icon_image_2.png
+    - assets/images/icon_image_3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

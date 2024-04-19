@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/page/recommend/RecommendBanner.dart';
 import 'package:flutterdemo/page/recommend/RecommendWebView.dart';
+import 'package:flutterdemo/page/recommend/SharedPreferencesPage.dart';
 
 import '../Tabs.dart';
 import '../search/SearchPage.dart';
 
 String LOG_TAG = "alex";
+
 ///跳转标识
 String gotoSearch = "/goto_search";
 String gotoBanner = "/goto_banner";
 String gotoWebView = "/goto_webView";
+String gotoSharedPreferences = "/goto_SharedPreferences";
 
 /// 设置路由，为跳转做准备
 /// arguments 为传递的参数，在这里设置，则为必传参数
@@ -19,7 +22,8 @@ Map routes = {
   "/": (context) => const Tabs(),
   gotoSearch: (context, {arguments}) => SearchPage(arguments: arguments),
   gotoBanner: (context) => const RecommendBanner(),
-  gotoWebView: (context, {arguments}) => RecommendWebView(arguments: arguments)
+  gotoWebView: (context, {arguments}) => RecommendWebView(arguments: arguments),
+  gotoSharedPreferences: (context) => const SharedPreferencesPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {
